@@ -55,7 +55,7 @@ ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
 local Section = Tab:AddSection({
-	Name = "Speed"
+	Name = "Jump Power"
 })
 --[[
 Name = <string> - The name of the section.
@@ -94,6 +94,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Axe Dupe"
 })
+Tab:AddLabel("You can dupe 9 axes at a time but reset when above 9 or you wont get more!")
 
 Tab:AddButton({
     Name = "Dupe Slot 1!",
