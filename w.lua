@@ -64,7 +64,7 @@ Callback = <function> - The function of the slider.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "Speed"
+	Name = "Jump Power"
 })
 
 --[[
@@ -85,6 +85,43 @@ Tab:AddSlider({
     end
 })
 
+local Section = Tab:AddSection({
+	Name = "Fly"
+})
+
+Tab:AddBind({
+	Name = "Fly",
+	Default = Enum.KeyCode.E,
+	Hold = false,
+	Callback = function()
+			local MaxFlySpeed = 1 -- change this as needed
+ 
+			local UIS = game:GetService("UserInputService")
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			local Torso = (LocalPlayer.Character and LocalPlayer.Character:WaitForChild("Torso"))
+			local Mouse = LocalPlayer:GetMouse()
+			local Tool = Instance.new("Tool")
+			Tool.RequiresHandle = false
+			Tool.Name = "Fly tool"
+ 
+			assert(Torso.ClassName == "Part", "Yikes! Torso is not a part.")
+ 
+			local ToolUtils do
+    			ToolUtils = {
+        			Enabled = false,
+        			WindowFocused = true,
+ 
+			        Keys = {},        
+        			InternalVars = {
+            			FlyForward = 0,
+            			FlyBackward = 0
+        			}      
+    			}
+			end
+
+		end
+	end
+})
 
 
 --[[
