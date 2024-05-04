@@ -94,8 +94,8 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Axe Dupe"
 })
-Tab:AddLabel("You can dupe 9 axes at a time but reset when above 9 or you wont get more!")
-
+Tab:AddLabel("Dupes above 9 axes dont work!")
+Tab:AddLabel("Reset after each dupe above 9 or you wont get more!")
 Tab:AddButton({
     Name = "Dupe Slot 1!",
     Callback = function()
