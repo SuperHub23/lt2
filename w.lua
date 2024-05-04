@@ -74,9 +74,9 @@ Name = <string> - The name of the section.
 
 Tab:AddSlider({
     Name = "JumpPower",
-    Min = 3,
+    Min = 50,
     Max = 6000,
-    Default = 3,
+    Default = 50,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
     ValueName = "JumpPower",
