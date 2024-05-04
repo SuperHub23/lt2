@@ -84,6 +84,35 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
+
+local Tab = Window:MakeTab({
+	Name = "Dupe",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Axe Dupe"
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+			local args = {
+    		[1] = 1,
+    		[2] = game:GetService("Players").LocalPlayer
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("LoadSaveRequests"):WaitForChild("RequestLoad"):InvokeServer(unpack(args))
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
 local Tab = Window:MakeTab({
 	Name = "ESP",
 	Icon = "rbxassetid://4483345998",
