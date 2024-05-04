@@ -27,19 +27,11 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "SuperHub"
-})
-
---[[
-Name = 23234w - The name of the section.
-]]
-
-local Section = Tab:AddSection({
 	Name = "Speed"
 })
 
 --[[
-Name = <string> - The name of the section.
+Name = 23234w - The name of the section.
 ]]
 
 Tab:AddSlider({
@@ -70,6 +62,15 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
+
+local Section = Tab:AddSection({
+	Name = "Speed"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
 
 Tab:AddSlider({
     Name = "JumpPower",
