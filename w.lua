@@ -96,16 +96,25 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "Button!",
-	Callback = function()
-			local args = {
-    		[1] = 1,
-    		[2] = game:GetService("Players").LocalPlayer
-		}
+    Name = "Dupe Slot 1!",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(43, -319, -484)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	wait(0.2)
+	pl.CFrame = location
+        wait(2)
 
-		game:GetService("ReplicatedStorage"):WaitForChild("LoadSaveRequests"):WaitForChild("RequestLoad"):InvokeServer(unpack(args))
-      		print("button pressed")
-  	end    
+        local args = {
+            [1] = 1,
+            [2] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("LoadSaveRequests"):WaitForChild("RequestLoad"):InvokeServer(unpack(args))
+        print("button pressed")
+	wait(62)
+    end
 })
 
 --[[
