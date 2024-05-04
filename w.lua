@@ -1,7 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
 local Window = OrionLib:MakeWindow({Name = "SuperHub", HidePremium = false, SaveConfig = true, ConfigFolder = "SuperHubLT2"})
-
 --[[
 Name = SuperHub - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
@@ -13,27 +11,22 @@ IntroIcon = <string> - URL to the image you want to use in the intro animation.
 Icon = <string> - URL to the image you want displayed on the window.
 CloseCallback = <function> - Function to execute when the window is closed.
 ]]
-
 local Tab = Window:MakeTab({
 	Name = "Local",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 --[[
 Name = sw23235e - The name of the tab.
 Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
-
 local Section = Tab:AddSection({
 	Name = "Speed"
 })
-
 --[[
 Name = 23234w - The name of the section.
 ]]
-
 Tab:AddSlider({
     Name = "Speed",
     Min = 16,
@@ -52,7 +45,6 @@ Tab:AddSlider({
         print(Value)
     end
 })
-
 --[[
 Name = speedvv1> - The name of the slider.
 Min = <number> - The minimal value of the slider.
@@ -62,20 +54,19 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
-
 local Section = Tab:AddSection({
-	Name = "Jump Power"
+	Name = "Speed"
 })
-
 --[[
 Name = <string> - The name of the section.
 ]]
 
-
 Tab:AddSlider({
     Name = "JumpPower",
+    Min = 3,
     Min = 50,
     Max = 6000,
+    Default = 3,
     Default = 50,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
@@ -84,46 +75,6 @@ Tab:AddSlider({
 			game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
     end
 })
-
-local Section = Tab:AddSection({
-	Name = "Fly"
-})
-
-Tab:AddBind({
-	Name = "Fly",
-	Default = Enum.KeyCode.E,
-	Hold = false,
-	Callback = function()
-			local MaxFlySpeed = 1 -- change this as needed
- 
-			local UIS = game:GetService("UserInputService")
-			local LocalPlayer = game:GetService("Players").LocalPlayer
-			local Torso = (LocalPlayer.Character and LocalPlayer.Character:WaitForChild("Torso"))
-			local Mouse = LocalPlayer:GetMouse()
-			local Tool = Instance.new("Tool")
-			Tool.RequiresHandle = false
-			Tool.Name = "Fly tool"
- 
-			assert(Torso.ClassName == "Part", "Yikes! Torso is not a part.")
- 
-			local ToolUtils do
-    			ToolUtils = {
-        			Enabled = false,
-        			WindowFocused = true,
- 
-			        Keys = {},        
-        			InternalVars = {
-            			FlyForward = 0,
-            			FlyBackward = 0
-        			}      
-    			}
-			end
-
-		end
-	end
-})
-
-
 --[[
 Name = speedvv2> - The name of the slider.
 Min = <number> - The minimal value of the slider.
@@ -133,19 +84,16 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
-
 local Tab = Window:MakeTab({
 	Name = "ESP",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 --[[
 Name = sw23235e - The name of the tab.
 Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
-
 Tab:AddButton({
 	Name = "ESP",
 	Callback = function()
@@ -153,11 +101,8 @@ Tab:AddButton({
       		print("button pressed")
   	end    
 })
-
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-
-
 OrionLib:Init()
