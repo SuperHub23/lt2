@@ -59,7 +59,7 @@ Name = <string> - The name of the section.
 Tab:AddSlider({
     Name = "Speed",
     Min = 16,
-    Max = 200,
+    Max = 6000,
     Default = 16,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
@@ -88,7 +88,7 @@ Callback = <function> - The function of the slider.
 Tab:AddSlider({
     Name = "JumpPower",
     Min = 3,
-    Max = 200,
+    Max = 6000,
     Default = 3,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
