@@ -15,7 +15,7 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 
 local Tab = Window:MakeTab({
-	Name = "All you need",
+	Name = "Local",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -32,20 +32,6 @@ local Section = Tab:AddSection({
 
 --[[
 Name = 23234w - The name of the section.
-]]
-
-
-Tab:AddButton({
-	Name = "ESP",
-	Callback = function()
-          loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
 ]]
 
 local Section = Tab:AddSection({
@@ -110,6 +96,30 @@ ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
 
+local Tab = Window:MakeTab({
+	Name = "ESP",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = sw23235e - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "ESP",
+	Callback = function()
+          loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
 
 OrionLib:Init()
